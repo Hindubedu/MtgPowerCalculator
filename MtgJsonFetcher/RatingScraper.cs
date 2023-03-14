@@ -24,7 +24,7 @@ namespace MtgJsonFetcher
             return linkUrl;
         }
 
-        public async Task<string> GetSetDataFrom17LandsAPIAsync()
+        public async Task<string> GetSetDataFrom17LandsAPIAsync() //Call API of 17 lands to get the current set as data model, not working
         {
             HttpClient client = new HttpClient();
             string ApiEndPoint = "https://www.17lands.com/card_ratings/data?expansion=ONE&format=PremierDraft&start_date=2023-02-07&end_date=2023-03-13";
@@ -41,7 +41,7 @@ namespace MtgJsonFetcher
             }
         }
 
-        public List<(string, double)> Scrape()
+        public List<(string, double)> Scrape() // Yaaaargh we be scrapin' da booty (from mtgazone) only works for this site
         {
             List<string> namesAndRatings = new List<string>();
 

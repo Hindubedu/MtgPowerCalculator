@@ -21,7 +21,7 @@ namespace MtgJsonFetcher
 
         public Wrapper.Root ChooseSet(string setCode)
         {
-            path = $"../../../Json/{setCode}.json";
+            path = $"../../../Files/{setCode}.json";
             var jsonString = File.ReadAllText(path);
             var deserialized = JsonConvert.DeserializeObject<Wrapper.Root>(jsonString);
             //Next project: structur med deserialized og adgang

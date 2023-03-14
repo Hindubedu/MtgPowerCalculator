@@ -23,7 +23,7 @@ namespace MtgJsonFetcher
     {
         public class WeightedAverageOf17Lands
         {
-            public Dictionary<string, double> CalculateWeightedAverage(string filename)
+            public Dictionary<string, double> CalculateWeightedAverage(string filename)///Method not in use
             {
                 Dictionary<string, double> weightedAverages = new Dictionary<string, double>();
                 Dictionary<string, List<double>> colorLists = new Dictionary<string, List<double>>();

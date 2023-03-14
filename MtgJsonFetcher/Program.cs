@@ -84,7 +84,7 @@ namespace MtgJsonFetcher
             RatingSetter seventeensetter = new RatingSetter();
             Fetcher seventeenFetcher = new Fetcher("ONE");
             MtgPowerCalculator seventeenPower = new MtgPowerCalculator(seventeenFetcher);
-            seventeensetter.Set17LandsRating(seventeenFetcher, $"../../../card-ratings-2023-03-07.csv");
+            seventeensetter.Set17LandsRating(seventeenFetcher, $"../../../Files/card-ratings-2023-03-07.csv");
 
             var W = seventeenPower.WeightedAverageOfColor("W");
             var U = seventeenPower.WeightedAverageOfColor("U");

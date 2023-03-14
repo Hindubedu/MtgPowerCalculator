@@ -43,7 +43,7 @@ namespace MtgJsonFetcher
             return distinctList;
         }
 
-        public double WeightedAverageOfColor(string color)
+        public double WeightedAverageOfColor(string color) ///Good luck... 
         {
             List<Card> cardsOfGivenColor = GetListOfColor(color);
 

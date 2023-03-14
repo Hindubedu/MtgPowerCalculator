@@ -20,7 +20,7 @@ namespace MtgJsonFetcher
 
         }
 
-        public void SetRatingSetter(Fetcher fetcher, RatingScraper scraper)
+        public void SetRatingSetter(Fetcher fetcher, RatingScraper scraper) //Sets the reting of the cards for the given set contained in the data model class register. Uses a scraper this is the expert predictions
         {
             //List<(string, double)> ratings = GetRatedSet(setCode);
             List<(string, double)> ratings = scraper.Scrape();
@@ -41,7 +41,7 @@ namespace MtgJsonFetcher
             }
         }
 
-        public void Set17LandsRating(Fetcher fetcher, string filename) //File must have format: csv : Name,"Color","Rarity","# GIH","GIH WR"
+        public void Set17LandsRating(Fetcher fetcher, string filename) //Sets the rating of data model by a downloaded csv file from 17 lands. File must have format: csv : Name,"Color","Rarity","# GIH","GIH WR" 
         {
             List<(string, double)> ratings = new List<(string, double)>();
             int ratingSet = 0;
@@ -106,7 +106,7 @@ namespace MtgJsonFetcher
         }
 
 
-        public List<(string, double)> GetRatedSet(string setCode)
+        public List<(string, double)> GetRatedSet(string setCode) //Gets the rated set by txt file - This is not currently used 
         {
             List<(string, double)> ratedCardList = new List<(string, double)>();
             string path = $"../../../{setCode}.txt";
