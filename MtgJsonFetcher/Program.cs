@@ -9,6 +9,8 @@ using System.Net;
 using System.Xml.XPath;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
+using MtgJsonFetcher.Rating;
+using MtgJsonFetcher.Rating.Types;
 using Newtonsoft.Json;
 
 namespace MtgJsonFetcher
@@ -148,6 +150,15 @@ namespace MtgJsonFetcher
             {       
                     Console.WriteLine($"{item.Name} GIHWR: {(double)item.EverDrawnWinRate}");
             }
+        }
+
+        public static async Task<List<CardRatings>> GetCardRatings()
+        {
+            return await Ratings.Load(o =>
+            {
+                o.Expansion = Expansion.ONE;
+                o.Format = Format.PremierDraft;
+            });
         }
     }
 }
